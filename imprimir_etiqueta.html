@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Petshop, Alimentos, Mascotas, Juguetes, Comida, Perros">
+    <meta name="description" content="Duke's Petshop">
+    <meta name="author" content="Grupo 4">
+    <title>Duke's Petshop</title>
+    <link rel="icon" type="image/x-icon" href="pictures/Imagenes para front-end/huellas-de-garras.png">
+
+    <!-- Referencia a hoja de Estilos CSS (Bootstrap) -->
+    <link rel="stylesheet" href="bootstrap53/css/bootstrap.min.css">
+    <!-- Referencia a scripts JS (Bootstrap) -->
+    <script src="bootstrap53/js/bootstrap.bundle.min.js"></script>
+    <!-- Referencia a hoja de Estilos CSS (w3Schools) -->
+    <link rel="stylesheet" href="w3schools/w3.css">
+    <!-- Referencia a hoja de Estilos CSS Personalizadas -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Referencia a hoja de JS Personalizada -->
+    <!-- <script src="/js/js.js"></script> -->
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <script>
+        etiquetar(id){
+            const url = this.url + id;
+            var options = {
+                method: 'GET',
+            }
+            fetch(url, options)
+                .then(res => res.text()) // or res.json()
+                .then(res => {
+                    location.reload(); // recarga el json luego de eliminado el registro
+                })
+        }
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #b93af8">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar"
+                    aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="pictures/list-view-24-blanco.ico" alt="List">
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="pictures/house-24-blanco.ico" alt="House">
+                </a>
+                <div class="collapse navbar-collapse" id="miNavbar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main><br><br><br>
+        <br><br><br>
+        <div id="app" class="container">
+            <h1>Imprimir Etiqueta</h1><br>
+            <br>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr class="" v-for="producto in productos">
+                                <td>Cod. Barras; {{producto.cod_barra}}</td>
+                                <td>Marca: {{producto.marca}}</td>
+                                <td>Porducto: {{producto.nombre}}</td>
+                                <td>Precio: ${{producto.precio}}</td>
+
+
+                                <td>
+                                    <button type="button" class="btn btn-success"
+                                        v-on:click="etiquetar(producto.id)">Imprimir</button>
+                                </td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div>
+            <p>Copyright 2023 - All rights reserved</p>
+            <p>Designed By: Nazareno Taux & Julieta Solomonovici</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/productos.js"></script>
+</body>
+
+</html>

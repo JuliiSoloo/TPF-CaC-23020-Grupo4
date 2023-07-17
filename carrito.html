@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Petshop, Alimentos, Mascotas, Juguetes, Comida, Perros">
+    <meta name="description" content="Duke's Petshop">
+    <meta name="author" content="Grupo 4">
+    <title>Duke's Petshop</title>
+    <link rel="icon" type="image/x-icon" href="pictures/Imagenes para front-end/huellas-de-garras.png">
+    <link rel="stylesheet" href="bootstrap53/css/bootstrap.min.css">
+    <script src="bootstrap53/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="w3schools/w3.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="/js/js.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #b93af8">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar"
+                aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="pictures/list-view-24-blanco.ico" alt="List">
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="pictures/house-24-blanco.ico" alt="House">
+            </a>
+            <div class="collapse navbar-collapse" id="miNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link miItem" href="index_form.html" target="_self" style="color: black;">Atencion
+                            al cliente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="bodyCarrito">
+    <main><br><br><br>
+        <h1 class="textoCarrito">¡Bienvenid@!</h1><br>
+        <h2 class="textoCarrito">Agregá todo lo que necesites al carrito</h2><br>
+        <h2 class="textoCarrito">Si necesitas ayuda, pedí atencion al cliente</h2><br>
+        <div class="container">
+            <div id="app" class=" d-flex  flex-row flex-wrap justify-content-around ">
+                <div style="width: 200px;" v-for="item of productos" class="card">
+
+                    <img class="card-img-top " :src="item.imagen" :alt="item.nombre">
+                    <div class="card-body">
+                        <p class="card-title">{{item.nombre}}
+                        <p>
+                        <p class="card-text">Precio: $ {{item.precio}}</p>
+                        <p class="card-text">Stock: {{item.stock}} u.</p>
+                        <label for="cantidad">Cantidad: </label>
+                        <input type="number" name="cantidad" id="cantidad" v-model="item.cantidad"
+                            class="form-control form-control-sm">
+                        <button v-on:click="comprar(item)">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/carrito.js"></script>
+
+</body>
+
+<footer>
+    <div>
+        <p>Copyright 2023 - All rights reserved</p>
+        <p>Designed By: Nazareno Taux & Julieta Solomonovici</p>
+    </div>
+</footer>
+
+</html>

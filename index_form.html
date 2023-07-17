@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Petshop, Alimentos, Mascotas, Juguetes, Comida, Perros">
+    <meta name="description" content="Duke's Petshop">
+    <meta name="author" content="Grupo 4">
+    <title>Duke's Petshop</title>
+    <link rel="icon" type="image/x-icon" href="pictures/Imagenes para front-end/huellas-de-garras.png">
+       <link rel="stylesheet" href="bootstrap53/css/bootstrap.min.css"> 
+       <script src="bootstrap53/js/bootstrap.bundle.min.js"></script> 
+       <link rel="stylesheet" href="w3schools/w3.css">
+       <link rel="stylesheet" href="css/estilos.css">
+       <script src="/js/js.js"></script>
+
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #E9C12F; opacity: 88%;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar"
+                aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="pictures/list-view-24-blanco.ico" alt="List">
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="pictures/house-24-blanco.ico" alt="House">
+            </a>
+        </div>
+    </nav>
+</header>  
+
+<body style="background-color: blueviolet">
+    <main class="mainFormulario">    
+
+        <div class="w3-quarter">
+            <img class="gatito" src="pictures/gatito.JPG">
+        </div>
+
+        <form class="colorestextos" action="show-data.html">
+            <fieldset><br><br>
+                <h2>Indique todos los datos para atender rapidamente su consulta</h2>
+                <br>
+               
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" id="fecha"><br>
+                <br>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" size="65"><br>
+                <br>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" size="65"><br>
+                <br>
+                <label for="num_contacto">Número de Contacto</label>
+                <input type="number" name="num_contacto" id="num_contacto"><br>
+                <br>
+                <label for="mail">Correo Electrónico</label>
+                <input type="text" name="mail" id="mail" size="65" placeholder=".....@.com.ar"><br><br>
+
+                <p><strong> Consulta:</strong></p>
+                <label for="comentarios"></label>
+                <textarea name="comentarios" rows="5" cols="50" placeholder="comentarios"></textarea>
+                <br>
+                <br>
+                <input type="submit" name="Enviar" value="Enviar" onclick="return confirmacion()"> <!-- envia al action -->
+                <button type="reset">Cancelar</button>
+                <a href="index.html" ></a>
+            </fieldset>
+        </form>         
+    </main>    
+</body>
+<footer>
+    <div>
+        <p>Copyright 2023 - All rights reserved</p>
+        <p>Designed By: Nazareno Taux & Julieta Solomonovici</p>
+    </div>
+</footer>
+</html>

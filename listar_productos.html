@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Petshop, Alimentos, Mascotas, Juguetes, Comida, Perros">
+    <meta name="description" content="Duke's Petshop">
+    <meta name="author" content="Grupo 4">
+    <title>Duke's Petshop</title>
+    <link rel="icon" type="image/x-icon" href="pictures/Imagenes para front-end/huellas-de-garras.png">
+
+    <!-- Referencia a hoja de Estilos CSS (Bootstrap) -->
+    <link rel="stylesheet" href="bootstrap53/css/bootstrap.min.css">
+    <!-- Referencia a scripts JS (Bootstrap) -->
+    <script src="bootstrap53/js/bootstrap.bundle.min.js"></script>
+    <!-- Referencia a hoja de Estilos CSS (w3Schools) -->
+    <link rel="stylesheet" href="w3schools/w3.css">
+    <!-- Referencia a hoja de Estilos CSS Personalizadas -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Referencia a hoja de JS Personalizada -->
+    <script src="/js/js.js"></script>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #b93af8">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar"
+                    aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="pictures/list-view-24-blanco.ico" alt="List">
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="pictures/house-24-blanco.ico" alt="House">
+                </a>
+                <div class="collapse navbar-collapse" id="miNavbar"></div>
+            </div>
+        </nav>
+    </header>
+    <main><br><br><br>
+        <br><br><br>
+           <!--  Monta el Objeto Vue-->
+
+        <div id="app" class="container">
+            <h1>Duke's Petshop</h1> <BR></BR>
+            <h1>Modificación de Productos</h1><br>
+            <br>
+            <a class="btn btn-primary" href="./producto_nuevo.html">Nuevo</a>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" v-for="producto in productos">
+                                    <td scope="row">{{producto.id}}</td>
+                                    <td>{{producto.nombre}}</td>
+                                    <td>{{producto.precio}}</td>
+                                    <td>{{producto.stock}}</td>
+                                    <td>
+                                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-warning" :href="'producto_update.html?id='+ producto.id">Editar</a>
+                                        <a class="btn btn-success" :href="'imprimir_etiqueta.html?id='+ producto.id">Etiqueta</a>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <p>Fuente: https://ntaux.pythonanywhere.com/productos</p>
+    </main>
+    <footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/productos.js"></script>
+</body>
+<footer>
+    <div>
+        <p>Copyright 2023 - All rights reserved</p>
+        <p>Designed By: Nazareno Taux & Julieta Solomonovici</p>
+    </div>
+</footer>
+</html>

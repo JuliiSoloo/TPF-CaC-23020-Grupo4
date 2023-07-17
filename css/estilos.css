@@ -1,0 +1,366 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu:wght@500&family=Urbanist:wght@500&display=swap');
+
+/* Estilo pre-determinado del cuerpo principal del documento */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+/* Estilos personalizados para la Navbar*/
+.navbar {
+    --bs-navbar-hover-color: #AF2828;
+}
+.miItem {
+    font-size: 15px;
+    color: #002454;
+    font-weight:bold;
+    text-align: center;
+}
+
+.primer-foto{
+    margin-top: 3.9%;
+}
+
+/* Clase contenedora de tarjetas de Sucursales */
+.claseSucur {
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #a60dff;
+}
+.claseSucur h5 {
+    color: #a60dff;
+}
+.claseSucur a {
+    color: #a60dff;
+    text-decoration: none;
+}
+
+/* Clase contenedora de tarjetas de Servicios */
+.claseServ {
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #a60dff;
+}
+.claseServ h5 {
+    color: #a60dff;
+    font-size: 25px;
+}
+
+/* Clase contenedora de tarjetas de Ofertas */
+.claseOfer {
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #a60dff;
+    color: white;
+}
+.claseOfer h2 {
+    color: red ;
+}
+.w3-third ul {
+    background-color: rgb(252, 252, 176);
+    color: rgb(101, 44, 155);
+}
+.w3-third p {
+    color: black;
+    font-weight: bold;
+}
+.w3-border {
+    border-radius: 10px;
+}
+
+/* Personalización del form de Suscripción */
+.claseSusc {
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #a60dff;
+}
+.claseSusc h5 {
+    color: #a60dff;
+    font-size: 25px;
+}
+.claseSusc h2 {
+    color: yellow;
+    text-align: center;
+}
+.claseSusc p {
+    color: #a60dff;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.contSusc {
+    padding: 10px;
+    background-color: rgb(252, 252, 176) ;
+}
+.contSusc h2 {
+    color: #a60dff;
+    text-align: center;
+}
+input[type=submit] {
+    background-color: rgb(11, 94, 215);
+    padding: 5px;
+    margin: 0px;
+    color: white;
+    border: none;
+}
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+/* Media query para el comportamiento del contenedor de suscripción */
+@media screen and (min-width: 1280px) {
+    .claseSusc {
+        padding-left: 350px;
+        padding-right: 350px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .claseSusc {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Clase contenedora de tarjetas de Marcas */
+.claseMarc {
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: blueviolet;
+    color: white;
+}
+.claseMarc h2 {
+    color: yellow;
+}
+.claseMarc p {
+    margin-bottom: 60px;
+}
+
+/* Clase contenedora de formulario de Contacto */
+.claseConta {
+    background-color: rgb(249, 249, 147);
+}
+
+/* Clase contenedora del footer */
+.footer-section{
+    background-color: #0E0D39;
+    padding: 30px 0px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .footer-section .row{
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    font-size: 1.2rem;
+    color: #ffeee9;
+    text-align: center;
+  }
+  
+  .footer-section .row a{
+  text-decoration: none;
+  color: #FFEEE9;
+  transition: 0.5s;
+  }
+  
+  .footer-section .row a:hover{
+  color: #999999;
+  }
+  
+  .footer-section .row ul{
+  width: 100%;
+  }
+  
+  .footer-section .row ul li{
+  display: inline-block;
+  margin: 0px 30px;
+  }
+  
+  .footer-section .row a i{
+  font-size: 2rem;
+  margin: 0% 1%;
+  }
+  
+  .footer-section .row p{
+  font-size: 0.8rem;
+  }
+
+/* Media query para el comportamiento del footer */
+@media screen and (min-width: 1340px){
+    .clasePie {
+		padding-left: 200px;
+		padding-right: 40px;
+	}
+}
+@media screen and (max-width: 1340px){
+    .clasePie {
+		padding-left: 150px;
+		padding-right: 10px;
+	}
+}
+@media screen and (max-width: 1260px){
+    .clasePie {
+		padding-left: 120px;
+		padding-right: 10px;
+	}
+}
+@media screen and (max-width: 1230px){
+    .clasePie {
+		padding-left: 100px;
+		padding-right: 10px;
+	}
+}
+@media screen and (max-width: 1210px){
+    .clasePie {
+		padding-left: 50px;
+		padding-right: 5px;
+	}
+}
+@media screen and (max-width: 900px){
+    .clasePie {
+		padding-left: 20px;
+		padding-right: 5px;
+	}
+}
+@media screen and (max-width: 745px){
+    .clasePie {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+@media screen and (max-width: 745px){
+    .clasePie {
+		padding-left: 100px;
+		padding-right: 2px;
+	}
+}
+
+/* Personalización del Botón Acordeón de Quiénes somos */
+.claseAcor {
+    margin-right: 140px;
+}
+.accordion {
+    --bs-accordion-color: yellow;
+    --bs-accordion-bg: blueviolet;
+    --bs-accordion-btn-color: yellow;
+    --bs-accordion-btn-bg: blueviolet;
+    --bs-accordion-active-bg: blueviolet;
+    --bs-accordion-btn-active-color: yellow;
+    --bs-accordion-btn-focus-border-color: blueviolet;
+    --bs-accordion-btn-focus-box-shadow: blueviolet;
+    --bs-accordion-active-color: yellow;
+    --bs-accordion-active-bg: blueviolet;
+}
+.accordion-button {
+    padding-top: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.mainFormulario{
+    align-items: center;
+    text-align: center;
+}
+
+.accordion-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* Personalización del Powered by */
+.clasePower h4 {
+    margin-top: 40px;
+    padding-bottom: 0px;
+}
+.clasePower a {
+    text-decoration: underline;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-body:hover {
+    background: #fff39c;
+    transition: 0.45s all linear;
+
+.card-title{
+    color: #0E0D39;
+    transition: 0.45s all linear;
+}
+    
+}
+
+.cardSuc{
+    margin-right: 2%;
+    margin-left: 2%;
+    border-radius: 60px;
+}
+
+.tam {
+    max-width: 5%;
+    height: auto;
+  }
+
+  .loginTipo{
+    border-color: 2px solid black;
+    height: 80%;
+    width: 80%;
+  }
+
+
+h2{
+    font-weight: bold;
+  }
+
+  .gatito{
+    height: 90%;
+    width: 90%;
+    margin-top: 20%;
+  }
+
+  .tamanio{
+    height: 100%;
+    width: 100%;
+  }
+
+  .bodyCarrito{
+    background-color: #fbffd9 ;
+  }
+
+.textoCarrito{
+    color: blueviolet;
+    text-align: center;
+    width: 100%;
+    font-size: 170%;
+}
+
+.colorestextos{
+    color: white;
+}
+
+.card{
+   margin-top: 10px;
+}
+
+footer{
+    font-size: 15px;
+    color: #002454;
+    font-weight:bold;
+    text-align: center;
+}

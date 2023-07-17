@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Petshop, Alimentos, Mascotas, Juguetes, Comida">
+    <meta name="description" content="Duke's Petshop">
+    <meta name="author" content="Grupo 4">
+    <title>Duke's Petshop</title>
+    <link rel="icon" type="image/x-icon" href="pictures/Imagenes para front-end/huellas-de-garras.png">
+    <link rel="stylesheet" href="bootstrap53/css/bootstrap.min.css">
+    <script src="bootstrap53/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="w3schools/w3.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="/js/js.js"></script>
+
+    <script>
+        function loguear() {
+            let user = document.getElementById("usuario").value;
+            let pass = document.getElementById("clave").value;
+
+            if (user == "Petshop" && pass == "Duke") {
+                window.location = "listar_productos.html";
+            }
+
+            else {
+                alert("Datos ingresados incorrectos")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #E9C12F; opacity: 88%;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar"
+                    aria-controls="miNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="pictures/list-view-24-blanco.ico" alt="List">
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="pictures/house-24-blanco.ico" alt="House">
+                </a>
+                <div class="collapse navbar-collapse" id="miNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link miItem" href="#Nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link miItem" href="#sucursales">Sucursales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link miItem" href="carrito.html">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link miItem" href="index_form.html" target="_self"
+                                style="color: #FF3131;">Atencion al cliente</a>
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input class="loginTipo" type="text" placeholder="Usuario" id="usuario">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input class="loginTipo" type="password" placeholder="Contraseña" id="clave">
+                        </li>
+                        <li>
+                            <input class="loginTipo" type="boton" value="Ingresar" onclick=loguear()>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="primer-foto">
+            <img src="pictures/Imagenes para front-end/Perrito lindo.png" class="Perrito" alt="Perrito" width="100%">
+        </div>
+
+        <div id="Nosotros" class="claseServ">
+            <h2 style="text-align: center;color: #F6DC17; border-style: #FF00FF;">¿Que ofrecemos?</h2>
+            <p style="text-align: center;color: white;">Pensados para la comodidad del paciente y del cliente, nuestros
+                consultorios cumplen con los más altos estándares de calidad para la atención de tu mascota en todas
+                nuestras clínicas veterinarias.</p>
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-10">
+                    <div class="card text-center tamanio">
+                        <div class="card-body">
+                            <img src="pictures/Imagenes para front-end/free-30-instagram-stories-icons79_122626.ico"
+                                class="card-img-top" alt="Exteriores" style="width: auto;height: auto;">
+                            <h5 class="card-title">Peluqueria</h5>
+                            <p class="card-text" style="font-style: italic;">
+                                En Duke's tenemos las mejores peluquerías para perros y gatos con los mejores peluqueros
+                                de mascotas que podrás encontrar. Consultá tu sucursal más cercana y cuidá de la
+                                apariencia de tu mejor amigo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-10">
+                    <div class="card  text-center tamanio">
+                        <div class="card-body">
+                            <img src="pictures/Imagenes para front-end/hospital-1_icon-icons.com_66068.ico"
+                                class="card-img-top" alt="Interiores" style="width: auto;height: auto;">
+                            <h5 class="card-title">Veterinaria</h5>
+                            <p class="card-text" style="font-style: italic;">
+                                En Duke's contamos con los mejores Médicos Veterinarios con formación académica de
+                                calidad para ofrecerles las herramientas necesarias para cuidar de tu mascota. Consultá
+                                todas nuestras sucursales de hospitales veterinarios para poder ayudarte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-10">
+                    <div class="card text-center tamanio">
+                        <div class="card-body">
+                            <img src="pictures/Imagenes para front-end/support_help_foster_adopt_child_adoption_kid_icon_251171.ico"
+                                class="card-img-top" alt="Maderas" style="width: auto;height: auto;">
+                            <h5 class="card-title">Adopciones</h5>
+                            <p class="card-text" style="font-style: italic;">
+                                En Duke's conectamos humanos con su mascota. Sabemos la importancia de que no haya
+                                ningún animal sin familia y por eso apoyamos y ayudamos a fundaciones y asociaciones
+                                todos los dias para lograrlo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-10">
+                    <div class="card text-center tamanio">
+                        <div class="card-body">
+                            <img src="pictures/Imagenes para front-end/1455554748_line-79_icon-icons.com_53373.ico"
+                                class="card-img-top" alt="Insumos" style="width: auto;height: auto;">
+                            <h5 class="card-title">Microchips</h5>
+                            <p class="card-text" style="font-style: italic;">
+                                Todos los días podes acercarte a nuestras sucursales para ayudarnos a mantener nuestras
+                                mascotas identificadas y certificar que sos el legítimo propietario de tu mascota. El
+                                microchip no es un rastreador GPS. Por el momento no existe dicho servicio en el país.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sucursales" class="claseSucur">
+            <h2 style="text-align: center;color: #F6DC17; border-style: #FF00FF;">¡Encontrá las Sucursales Duke's más
+                cercanas!</h2>
+            <p style="text-align: center;color: #FCF3FF;">Actualmente Duke's posee 3 locales y seguiremos creciendo con
+                nuevas aperturas en el área y en el resto del país.</p>
+
+            <div class="card-group">
+                <div class="card text-center cardSuc">
+                    <img src="pictures/Imagenes para front-end/Local - Caba.png" class="card-img-top" alt="Centro"
+                        style="width:100%;height: 313px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Sucursal Belgrano - CABA</h5>
+                        <p class="card-text">Servicio de Estacionamiento; Veterinaria; Peluquería y Adopción.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item card-body"><img class="tam"
+                                src="pictures/locacion.png">&nbsp;&nbsp;Ortega
+                            y Gasset
+                            1876</li>
+                        <li class="list-group-item card-body"><img class="tam"
+                                src="pictures/whatsapp.png">&nbsp;&nbsp;11 6146
+                            7822</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="mailto:centro@colibri.com.ar" class="card-link"><img class="tam"
+                                src="pictures/mail.png">&nbsp;&nbsp;dukebelgrano@puppis.com.ar</a>
+                    </div>
+                </div>
+
+                <div class="card text-center cardSuc">
+                    <img src="pictures/Imagenes para front-end/Local - ZN.png" class="card-img-top" alt="Norte"
+                        style="width:100%;height: 313px;">
+                    <div class="card-body ">
+                        <h5 class="card-title">Sucursal Zona Norte</h5>
+                        <p class="card-text ">Servicio de Estacionamiento; Veterinaria; Peluquería; Adopción y Retiro en
+                            auto.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item card-body"><img class="tam"
+                                src="pictures/locacion.png">&nbsp;&nbsp;Gral.
+                            Laprida
+                            248, panamericana y ruta 25, Escobar</li>
+                        <li class="list-group-item card-body"><img class="tam"
+                                src="pictures/whatsapp.png">&nbsp;&nbsp;11 8757
+                            9134</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="mailto:norte@colibri.com.ar" class="card-link"><img class="tam"
+                                src="pictures/mail.png">&nbsp;&nbsp;dukezonanorte@puppis.com.ar</a>
+                    </div>
+                </div>
+
+                <div class="card text-center cardSuc">
+                    <img src="pictures/Imagenes para front-end/Local - ZS.png" class="card-img-top" alt="Sur"
+                        style="width:100%;height: 313px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Sucursal Zona Sur</h5>
+                        <p class="card-text">Servicio de Estacionamiento; Veterinaria; Peluquería; Adopción y Retiro en
+                            auto.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item card-body"><img class="tam"
+                                src="pictures/locacion.png">&nbsp;&nbsp;Av.
+                            Calchaquí
+                            3950, Quilmes, Buenos Aires</li>
+                        <li class="list-group-item card-body"><img class="tam" src="pictures/whatsapp.png">&nbsp;&nbsp;
+                            11 6574
+                            3520</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="mailto:sur@colibri.com.ar" class="card-link"><img class="tam"
+                                src="pictures/mail.png">&nbsp;&nbsp;dukezonasur@puppis.com.ar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<footer>
+    <div>
+        <p>Copyright 2023 - All rights reserved</p>
+        <p>Designed By: Nazareno Taux & Julieta Solomonovici</p>
+    </div>
+</footer>
+</html>
